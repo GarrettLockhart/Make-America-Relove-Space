@@ -4,10 +4,106 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Document</title>
   </head>
   <body>
+    <!-- Main container -->
+    <div class="container mx-auto flex h-screen">
+      <!-- Main content left side -->
+      <div class="w-3/4 h-full m-6">
+        <!-- Header(date, and search bar) -->
+        <section class="flex justify-between items-center h-20">
+          <!-- Top left date -->
+          <div class="flex flex-col justify-center h-full">
+            <h2 class="text-3xl font-bold">January 2022</h2>
+            <p>Thursday, Jan 4, 2022</p>
+          </div>
+          <!-- Search Bar -->
+          <form id="search-form-el" class="h-12 flex">
+            <label class="h-full" for="search-bar-el">
+              <input
+                class="h-full rounded-md pl-2 p-2 bg-gray-100"
+                type="text"
+                id="search-bar-el"
+                placeholder="Search..."
+              />
+              <button
+                class="h-full rounded-md px-4 py-2 bg-gray-100"
+                id="search-bar-btn"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </label>
+          </form>
+        </section>
+
+        <!-- Todays overview -->
+        <div class="mt-12">
+          <h4 class="text-xl font-bold">Today's Overview</h4>
+        </div>
+
+        <!-- Weather detail cards container -->
+        <section class="h-1/4" id="weather-details">
+          <!-- Cards top row -->
+          <div id="weather-details-top" class="flex flex-row h-1/2">
+            <!-- Card one -->
+            <div
+              id="weather-details-wind"
+              class="box-border flex flex-col justify-center items-center w-1/2 m-2 rounded-lg bg-gray-100"
+            >
+              <p>Wind Speed</p>
+              <p class="text-4xl">12mph</p>
+            </div>
+            <!-- Card Two -->
+            <div
+              id="weather-details-rain"
+              class="box-border flex flex-col justify-center items-center w-1/2 m-2 rounded-lg bg-gray-100"
+            >
+              <p>Rain Chance</p>
+              <p class="text-4xl">24%</p>
+            </div>
+          </div>
+
+          <!-- cards bottom row -->
+          <div id="weather-details-bottom" class="flex h-1/2">
+            <!-- Card One -->
+            <div
+              id="weather-details-wind"
+              class="box-border flex flex-col justify-center items-center w-1/2 m-2 rounded-lg bg-gray-100"
+            >
+              <p>Pressure</p>
+              <p class="text-4xl">720 hpa</p>
+            </div>
+            <!-- Card Two -->
+            <div
+              id="weather-details-rain"
+              class="box-border flex flex-col justify-center items-center w-1/2 m-2 rounded-lg bg-gray-100"
+            >
+              <p>Uv Index</p>
+              <p class="text-4xl">2.3</p>
+            </div>
+          </div>
+        </section>
+        <!-- Sidebar content right side -->
+      </div>
+      <section class="h-screen w-108 bg-slate-200">
+        <p class="m-8 text-3xl">Side Bar goes here</p>
+      </section>
+    </div>
     <script src="./assets/scripts/main.js"></script>
   </body>
 </html>
