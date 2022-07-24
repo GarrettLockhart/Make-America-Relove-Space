@@ -594,10 +594,6 @@ video {
   margin: 0.5rem;
 }
 
-.m-8 {
-  margin: 2rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -639,16 +635,12 @@ video {
   height: 50%;
 }
 
-.w-3\/4 {
-  width: 75%;
+.w-full {
+  width: 100%;
 }
 
 .w-1\/2 {
   width: 50%;
-}
-
-.w-108 {
-  width: 27rem;
 }
 
 .flex-row {
@@ -684,9 +676,32 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.bg-slate-200 {
+.bg-zinc-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  background-color: rgb(244 244 245 / var(--tw-bg-opacity));
+}
+
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
 }
 
 .p-2 {
@@ -726,45 +741,24 @@ video {
   font-weight: 700;
 }
 
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 body {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  background-image: url('https://nasaprospect.com/img/space_stars_static.svg');
+  background-attachment: fixed;
+  background-color: rgb(16, 16, 52);
 }
 
-@media (min-width: 480px) {
-  .sm\:h-auto {
-    height: auto;
-  }
 
-  .sm\:flex-col {
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:h-auto {
-    height: auto;
-  }
-
-  .md\:w-full {
-    width: 100%;
-  }
-
-  .md\:flex-col {
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 976px) {
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:h-1\/4 {
-    height: 25%;
-  }
-
-  .lg\:w-108 {
-    width: 27rem;
-  }
-}
