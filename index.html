@@ -17,26 +17,24 @@
 
 <body>
   <!-- Main container -->
-  <div class="container mx-auto flex h-screen">
+  <div class="container mx-auto flex h-screen text-white">
     <!-- Main content left side -->
-    <div class="w-3/4 h-full m-6">
+    <div class="w-full h-full m-6">
       <!-- Header(date, and search bar) -->
-      <section class="flex justify-between items-center h-20">
+      <section class="flex justify-between items-center h-20 mt-5">
         <!-- Top left date -->
         <div class="flex flex-col justify-center h-full">
-          <h2 class="text-3xl font-bold">January 2022</h2>
-          <p>Thursday, Jan 4, 2022</p>
+          <h2 class="text-4xl font-bold">Sol 265</h2>
+          <p>Earth Day: Jan 4, 2022</p>
         </div>
-        <!-- Search Bar -->
-        <form id="search-form-el" class="h-12 flex">
-          <label class="h-full" for="search-bar-el">
-            <input class="h-full rounded-md pl-2 p-2 bg-gray-100" type="text" id="search-bar-el"
-              placeholder="Search..." />
-            <button class="h-full rounded-md px-4 py-2 bg-gray-100" id="search-bar-btn">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </label>
-        </form>
+        <!-- Light mode/Dark mode -->
+        <section>
+          <div id="light-mode-toggle" class="cursor-pointer">
+            <i class="fa-regular fa-lightbulb text-4xl w-full text-center"></i>
+            <p>Click Me!</p>
+            <!-- Icon for light mode "<i class="fa-regular fa-lightbulb"></i>" -->
+          </div>
+        </section>
       </section>
 
       <!-- Todays overview -->
@@ -45,47 +43,67 @@
       </div>
 
       <!-- Weather detail cards container -->
-      <section class="h-1/4" id="weather-details">
+      <section class="h-auto lg:h-1/4" id="weather-details">
         <!-- Cards top row -->
-        <div id="weather-details-top" class="flex flex-row h-1/2">
+        <div id="weather-details-top" class="h-1/2 flex flex-col items-center lg:flex lg:flex-row lg:h-auto">
           <!-- Card one -->
-          <div id="weather-details-wind"
-            class="box-border flex flex-col justify-center items-center w-1/2 m-2 rounded-lg bg-gray-100">
-            <p>Wind Speed</p>
-            <p class="text-4xl">12mph</p>
+          <div id="weather-details-temp-high"
+            class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2">
+            <div class="flex justify-center items-center w-full lg:w-1/2">
+              <i class="fa-solid fa-temperature-high text-5xl mr-12 text-red-400"></i>
+              <div class="flex flex-col text-center">
+                <p>High</p>
+                <p class="text-3xl lg:text-4xl">-15 &deg;F</p>
+              </div>
+            </div>
           </div>
           <!-- Card Two -->
-          <div id="weather-details-rain"
-            class="box-border flex flex-col justify-center items-center w-1/2 m-2 rounded-lg bg-gray-100">
-            <p>Rain Chance</p>
-            <p class="text-4xl">24%</p>
+          <div id="weather-details-temp-low"
+            class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2">
+            <div class="flex justify-center items-center w-full">
+              <i class="fa-solid fa-temperature-low text-5xl mr-12 text-blue-400"></i>
+              <div class="flex flex-col text-center">
+                <p>Low</p>
+                <p class="text-3xl lg:text-4xl">-147 &deg;F</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- cards bottom row -->
-        <div id="weather-details-bottom" class="flex h-1/2">
+        <div id="weather-details-bottom" class="h-1/2 flex flex-col items-center lg:flex lg:flex-row lg:h-auto">
           <!-- Card One -->
-          <div id="weather-details-wind"
-            class="box-border flex flex-col justify-center items-center w-1/2 m-2 rounded-lg bg-gray-100">
-            <p>Pressure</p>
-            <p class="text-4xl">720 hpa</p>
+          <div id="weather-details-rain"
+            class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2">
+            <div class="flex justify-center items-center w-full">
+              <i class="fas fa-compress-alt text-5xl mr-12"></i>
+              <div class="flex flex-col text-center">
+                <p>Pressure</p>
+                <p class="text-3xl lg:text-4xl">720 hpa</p>
+              </div>
+            </div>
           </div>
           <!-- Card Two -->
           <div id="weather-details-rain"
-            class="box-border flex flex-col justify-center items-center w-1/2 m-2 rounded-lg bg-gray-100">
-            <p>Uv Index</p>
-            <p class="text-4xl">2.3</p>
+            class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2">
+            <div class="flex justify-center items-center w-full">
+              <i class="fas fa-wind text-5xl mr-12"></i>
+              <div class="flex flex-col text-center">
+                <p>Wind Speed</p>
+                <p class="text-3xl lg:text-4xl">12 mph</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!-- Sidebar content right side -->
+
     </div>
-    <section class="h-screen w-108 bg-slate-200">
-      <p class="m-8 text-3xl">Side Bar goes here</p>
-    </section>
   </div>
+  <!-- Image section below this line-->
   <script src="https://momentjs.com/downloads/moment.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./assets/scripts/main.js"></script>
 </body>
 

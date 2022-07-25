@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-image: url('https://nasaprospect.com/img/space_stars_static.svg');
+  background-attachment: fixed;
+  background-color: rgb(16, 16, 52);
+}
+
 body {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+
+
