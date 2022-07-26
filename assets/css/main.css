@@ -606,9 +606,17 @@ video {
   margin: -0.25rem;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
 }
 
 .mt-5 {
@@ -647,8 +655,8 @@ video {
   display: flex;
 }
 
-.h-screen {
-  height: 100vh;
+.h-auto {
+  height: auto;
 }
 
 .h-full {
@@ -657,10 +665,6 @@ video {
 
 .h-20 {
   height: 5rem;
-}
-
-.h-auto {
-  height: auto;
 }
 
 .h-1\/2 {
