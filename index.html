@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
 
 <body>
   <!-- Main container -->
-  <div class="container mx-auto flex h-screen text-white">
+  <div class="container mx-auto flex h-screen text-white dark:text-black">
     <!-- Main content left side -->
     <div class="w-full h-full m-6">
       <!-- Header(date, and search bar) -->
@@ -30,12 +30,16 @@
           <h2 class="text-4xl font-bold">Sol 265</h2>
           <p>Earth Day: Jan 4, 2022</p>
         </div>
-        <!-- Light mode/Dark mode -->
+        <!-- Light mode/Dark mode toggle icon -->
         <section>
           <div id="light-mode-toggle" class="cursor-pointer">
-            <i id="light-mode-btn" class="fa-regular fa-lightbulb text-4xl w-full text-center"></i>
-            <p>Click Me!</p>
+            <!-- <i id="light-mode-btn" class="fa-regular fa-lightbulb text-4xl w-full text-center"></i>
+            <p>Click Me!</p> -->
             <!-- Icon for light mode "<i class="fa-regular fa-lightbulb"></i>" -->
+            <!-- New code for light mode toggle below here -->
+            <i id="dark-mode-btn" class="fa-regular fa-lightbulb text-4xl w-full text-center"></i>
+            <i id="light-mode-btn" class="fa-solid fa-lightbulb text-4xl w-full text-center"></i>
+              <p>Click Me!</p>
           </div>
         </section>
       </section>
@@ -51,7 +55,7 @@
         <div id="weather-details-top" class="h-1/2 flex flex-col items-center lg:flex lg:flex-row lg:h-auto">
           <!-- Card one -->
           <div id="weather-details-temp-high"
-            class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2">
+            class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2 dark:bg-white-200 dark:bg-opacity-20 dark:backdrop-blur-sm">
             <div class="flex justify-center items-center w-full lg:w-1/2">
               <i class="fa-solid fa-temperature-high text-5xl mr-12 text-red-400"></i>
               <div class="flex flex-col text-center">

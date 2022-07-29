@@ -13,4 +13,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.display-none {
+  @apply hidden;
+}
+
 
