@@ -27,8 +27,14 @@
       <section class="flex justify-between items-center h-20 mt-5">
         <!-- Top left date -->
         <div class="flex flex-col justify-center h-full">
-          <h2 class="text-4xl font-bold">Sol 265</h2>
-          <p>Earth Day: Jan 4, 2022</p>
+          <h2 class="text-4xl font-bold">
+            Sol 
+            <span data-sol></span>
+          </h2>
+          <p id="earthDate">
+            Earth Day: 
+            <span data-earth-date></span>
+          </p>
         </div>
         <!-- Light mode/Dark mode -->
         <section>
@@ -42,7 +48,7 @@
 
       <!-- Todays overview -->
       <div class="mt-12">
-        <h4 class="text-xl font-bold">Today's Overview</h4>
+        <h4 class="text-xl font-bold">Latest Mars Weather Overview</h4>
       </div>
 
       <!-- Weather detail cards container -->
@@ -56,7 +62,9 @@
               <i class="fa-solid fa-temperature-high text-5xl mr-12 text-red-400"></i>
               <div class="flex flex-col text-center">
                 <p>High</p>
-                <p class="text-3xl lg:text-4xl">-15 &deg;F</p>
+                <p class="text-3xl lg:text-4xl">
+                  <span data-temp-high></span> 
+                  &deg;C</p>
               </div>
             </div>
           </div>
@@ -67,7 +75,9 @@
               <i class="fa-solid fa-temperature-low text-5xl mr-12 text-blue-400"></i>
               <div class="flex flex-col text-center">
                 <p>Low</p>
-                <p class="text-3xl lg:text-4xl">-147 &deg;F</p>
+                <p class="text-3xl lg:text-4xl">
+                  <span data-temp-low></span>  
+                  &deg;C</p>
               </div>
             </div>
           </div>
@@ -82,7 +92,9 @@
               <i class="fas fa-compress-alt text-5xl mr-12"></i>
               <div class="flex flex-col text-center">
                 <p>Pressure</p>
-                <p class="text-3xl lg:text-4xl">720 hpa</p>
+                <p class="text-3xl lg:text-4xl">
+                  <span data-pressure></span>
+                   hpa</p>
               </div>
             </div>
           </div>
@@ -92,8 +104,10 @@
             <div class="flex justify-center items-center w-full">
               <i class="fas fa-wind text-5xl mr-12"></i>
               <div class="flex flex-col text-center">
-                <p>Wind Speed</p>
-                <p class="text-3xl lg:text-4xl">12 mph</p>
+                <p>Sunrise</p>
+                <p class="text-3xl lg:text-4xl">
+                  <span data-sunrise></span>
+                </p>
               </div>
             </div>
           </div>

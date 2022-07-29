@@ -1,3 +1,5 @@
+
+
 $("#light-mode-toggle").on("click", function () {
   var iconEL = $("#light-mode-btn");
   if (iconEL.hasClass("fa-regular")) {
@@ -32,7 +34,7 @@ $(document).ready(function () {
       console.log(response);
       response.json().then(function (data) {
         data.photos.forEach(appendImg);
-        // console.log(data);
+        console.log(data);
         // data.photos.forEach(item => {
         //     console.log(item.img_src);
         // });
@@ -57,3 +59,50 @@ $(document).ready(function () {
     );
   };
 });
+
+const weatherAPI = 'https://api.maas2.apollorion.com/'
+var solElement = document.querySelector('[data-sol')
+var earthDateElement = document.querySelector('[data-earth-date')
+var highTempElement = document.querySelector('data-temp-high')
+var lowTempElement = document.querySelector('data-temp-low')
+var pressureElement = document.querySelector('data-pressure')
+var sunriseElement = document.querySelector('data-sunrise')
+
+$(document).ready(function () {
+  fetch(weatherAPI).then(function (response) {
+    if (response.ok) {
+      console.log("🚀 ~ file: main.js ~ line 84 ~ response", response);
+
+      response.json().then(function (data) {
+        console.log("🚀 ~ file: main.js ~ line 84 ~ data", data);
+      });
+    } else {
+      console.log("there was an error");
+    }
+  });
+});
+
+displayWeather()
+
+// function displayWeather() {
+//   var requestOptions = {
+//     method: "GET",
+//     redirect: "follow"
+//   }
+// }
+function displayWeather () {
+  var requestOptions = {
+    method: "Get",
+    redirect: "follow",
+  };
+
+  fetch(weatherAPI, requestOptions).then((respones) => response.json())
+  .then((result) => {
+    solElement.innerHTML = result.sol;
+    earthDateElement.innerHTML = result.terrestrial_date;
+    highTempElement.innerHTML = result.max_temp;
+    lowTempElement.innerHTML = result.min_temp;
+    pressureElement.innerHTML = result.pressure;
+    sunriseElement.innerHTML = result.sunrise;
+  })
+}
