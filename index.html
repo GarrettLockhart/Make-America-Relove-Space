@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -20,29 +20,39 @@
 
 <body>
   <!-- Main container -->
-  <div class="container mx-auto flex h-auto mb-12 text-white">
+  <div class="container mx-auto flex h-auto text-white dark:text-black">
     <!-- Main content left side -->
     <div class="w-full h-full m-6">
       <!-- Header(date, and search bar) -->
       <section class="flex justify-between items-center h-20 mt-5">
         <!-- Top left date -->
         <div class="flex flex-col justify-center h-full">
-          <h2 class="text-4xl font-bold">Sol 265</h2>
-          <p>Earth Day: Jan 4, 2022</p>
+          <h2 class="text-4xl font-bold">
+            Sol 
+            <span data-sol></span>
+          </h2>
+          <p id="earthDate">
+            Earth Day: 
+            <span data-earth-date></span>
+          </p>
         </div>
-        <!-- Light mode/Dark mode -->
+        <!-- Light mode/Dark mode toggle icon -->
         <section>
           <div id="light-mode-toggle" class="cursor-pointer">
-            <i id="light-mode-btn" class="fa-regular fa-lightbulb text-4xl w-full text-center"></i>
-            <p>Click Me!</p>
+            <!-- <i id="light-mode-btn" class="fa-regular fa-lightbulb text-4xl w-full text-center"></i>
+            <p>Click Me!</p> -->
             <!-- Icon for light mode "<i class="fa-regular fa-lightbulb"></i>" -->
+            <!-- New code for light mode toggle below here -->
+            <i id="dark-mode-btn" class="fa-regular fa-lightbulb text-4xl w-full text-center"></i>
+            <i id="light-mode-btn" class="fa-solid fa-lightbulb text-4xl w-full text-center"></i>
+              <p>Click Me!</p>
           </div>
         </section>
       </section>
 
       <!-- Todays overview -->
       <div class="mt-12">
-        <h4 class="text-xl font-bold">Today's Overview</h4>
+        <h4 class="text-xl font-bold">Latest Mars Weather Overview</h4>
       </div>
 
       <!-- Weather detail cards container -->
@@ -51,12 +61,14 @@
         <div id="weather-details-top" class="h-1/2 flex flex-col items-center lg:flex lg:flex-row lg:h-auto">
           <!-- Card one -->
           <div id="weather-details-temp-high"
-            class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2">
+            class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2 dark:bg-white-200 dark:bg-opacity-20 dark:backdrop-blur-sm">
             <div class="flex justify-center items-center w-full lg:w-1/2">
               <i class="fa-solid fa-temperature-high text-5xl mr-12 text-red-400"></i>
               <div class="flex flex-col text-center">
                 <p>High</p>
-                <p class="text-3xl lg:text-4xl">-15 &deg;F</p>
+                <p class="text-3xl lg:text-4xl">
+                  <span data-temp-high></span> 
+                  &deg;C</p>
               </div>
             </div>
           </div>
@@ -67,7 +79,9 @@
               <i class="fa-solid fa-temperature-low text-5xl mr-12 text-blue-400"></i>
               <div class="flex flex-col text-center">
                 <p>Low</p>
-                <p class="text-3xl lg:text-4xl">-147 &deg;F</p>
+                <p class="text-3xl lg:text-4xl">
+                  <span data-temp-low></span>  
+                  &deg;C</p>
               </div>
             </div>
           </div>
@@ -82,7 +96,9 @@
               <i class="fas fa-compress-alt text-5xl mr-12"></i>
               <div class="flex flex-col text-center">
                 <p>Pressure</p>
-                <p class="text-3xl lg:text-4xl">720 hpa</p>
+                <p class="text-3xl lg:text-4xl">
+                  <span data-pressure></span>
+                   hpa</p>
               </div>
             </div>
           </div>
@@ -92,8 +108,10 @@
             <div class="flex justify-center items-center w-full">
               <i class="fas fa-wind text-5xl mr-12"></i>
               <div class="flex flex-col text-center">
-                <p>Wind Speed</p>
-                <p class="text-3xl lg:text-4xl">12 mph</p>
+                <p>Sunrise</p>
+                <p class="text-3xl lg:text-4xl">
+                  <span data-sunrise></span>
+                </p>
               </div>
             </div>
           </div>

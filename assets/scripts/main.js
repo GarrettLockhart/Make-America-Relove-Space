@@ -1,9 +1,9 @@
-$("#light-mode-toggle").on("click", function () {
-  var iconEL = $("#light-mode-btn");
-  if (iconEL.hasClass("fa-regular")) {
-    $(iconEL).toggleClass("fa-solid");
-  }
-});
+// $("#light-mode-toggle").on("click", function () {
+//   var iconEL = $("#light-mode-btn");
+//   if (iconEL.hasClass("fa-regular")) {
+//     $(iconEL).toggleClass("fa-solid");
+//   }
+// });
 
 $(document).ready(function () {
   var API_KEY = "pHcVaecY6RB0BWtz3VukErxnlV5Zdw6aZ5thATLI";
@@ -48,3 +48,104 @@ $(document).ready(function () {
       }
     }
 });
+
+const weatherAPI = 'https://api.maas2.apollorion.com/'
+var solElement = document.querySelector('[data-sol')
+var earthDateElement = document.querySelector('[data-earth-date')
+var highTempElement = document.querySelector('data-temp-high')
+var lowTempElement = document.querySelector('data-temp-low')
+var pressureElement = document.querySelector('data-pressure')
+var sunriseElement = document.querySelector('data-sunrise')
+
+$(document).ready(function () {
+  fetch(weatherAPI).then(function (response) {
+    if (response.ok) {
+      console.log("🚀 ~ file: main.js ~ line 84 ~ response", response);
+
+      response.json().then(function (data) {
+        console.log("🚀 ~ file: main.js ~ line 84 ~ data", data);
+      });
+    } else {
+      console.log("there was an error");
+    }
+  });
+});
+
+displayWeather()
+
+// function displayWeather() {
+//   var requestOptions = {
+//     method: "GET",
+//     redirect: "follow"
+//   }
+// }
+function displayWeather () {
+  var requestOptions = {
+    method: "Get",
+    redirect: "follow",
+  };
+
+  fetch(weatherAPI, requestOptions).then((respones) => response.json())
+  .then((result) => {
+    solElement.innerHTML = result.sol;
+    earthDateElement.innerHTML = result.terrestrial_date;
+    highTempElement.innerHTML = result.max_temp;
+    lowTempElement.innerHTML = result.min_temp;
+    pressureElement.innerHTML = result.pressure;
+    sunriseElement.innerHTML = result.sunrise;
+  })
+}
+
+
+// Dark/Light Icons
+const darkIcon = document.querySelector(".fa-regular");
+const lightIcon = document.querySelector(".fa-solid");
+
+// storage vars
+const userTheme = localStorage.getItem("theme");
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+
+const iconToggle = () => {
+  darkIcon.classList.toggle("display-none");
+  lightIcon.classList.toggle("display-none");
+}
+
+
+const themeCheck = () => {
+  if (userTheme === "dark" || (!userTheme && systemTheme)) {
+    document.documentElement.classList.add("dark");
+    darkIcon.classList.add("display-none");
+    return;
+  }
+  lightIcon.classList.add("display-none")
+}
+
+
+const themeSwitch = () => {
+  if (document.documentElement.classList.contains("dark")) {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+    iconToggle ();
+    return;    
+  }
+  document.documentElement.classList.add("dark");
+  localStorage.setItem("theme", "dark");
+  iconToggle ();
+}
+
+
+
+lightIcon.addEventListener("click", () => {
+  themeSwitch();
+});
+
+darkIcon.addEventListener("click", () => {
+  themeSwitch();
+});
+
+
+themeCheck();
+
+
+
