@@ -1,9 +1,28 @@
-// $("#light-mode-toggle").on("click", function () {
-//   var iconEL = $("#light-mode-btn");
-//   if (iconEL.hasClass("fa-regular")) {
-//     $(iconEL).toggleClass("fa-solid");
-//   }
-// });
+$(document).ready(function () {
+  const lightbox = document.createElement('div');
+  lightbox.id = 'lightbox';
+  document.body.appendChild(lightbox);
+  
+  const images = document.querySelectorAll('img');
+  images.forEach(image => {
+    image.addEventListener('click', e => {
+      lightbox.classList.add('active');
+      const img = document.createElement('img');
+      img.src = image.src;
+      img.style.borderRadius = '10px';
+      while (lightbox.firstChild) {
+        lightbox.removeChild(lightbox.firstChild);
+      }
+      lightbox.appendChild(img);
+    })
+  })
+  // logic to close image if click outside of image, and doesn't close if you click the image itself
+  lightbox.addEventListener('click', e => {
+    if (e.target !== e.currentTarget) return
+    lightbox.classList.remove('active');
+  })
+});
+
 
 $(document).ready(function () {
   var API_KEY = "pHcVaecY6RB0BWtz3VukErxnlV5Zdw6aZ5thATLI";
