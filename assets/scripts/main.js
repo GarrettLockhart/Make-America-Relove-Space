@@ -106,7 +106,7 @@ function displayWeather() {
   .then((response) => response.json())
   .then((result) => {
     solElement.innerHTML = result.sol;
-    earthDateElement.innerHTML = result.terrestrial_date;
+    earthDateElement.innerHTML = displayDate(new Date(result.terrestrial_date));
     highTempElement.innerHTML = result.max_temp;
     lowTempElement.innerHTML = result.min_temp;
     pressureElement.innerHTML = result.pressure;
@@ -114,6 +114,14 @@ function displayWeather() {
     sunriseElement.innerHTML = result.sunrise;
     sunsetElement.innerHTML = result.sunset; 
   })
+}
+
+// easier to read date
+function displayDate(terrestrial_date) {
+  return terrestrial_date.toLocaleDateString(
+    undefined,
+    { day: 'numeric', month: 'long', year: 'numeric'}
+  )
 }
 
 // calling function
