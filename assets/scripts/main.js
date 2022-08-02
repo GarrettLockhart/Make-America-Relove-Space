@@ -45,14 +45,14 @@ $(document).ready(function () {
               // if error, removed displayed error after 5 seconds
               setTimeout(function () {
                 $(errorMsgEl).text('');
-              }, 5000);
+              }, 4000);
         }
         });
     };
   
     function setImgUrls(data) {
         
-        for (var i = 0; i < 7; i++) {
+        for (var i = 0; i < 12; i++) {
           var imgUrl = data.photos[i].img_src;
           $('#img' + i).attr('src', imgUrl);
         }

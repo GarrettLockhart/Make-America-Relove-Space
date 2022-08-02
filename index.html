@@ -19,7 +19,7 @@
 </head>
 
 
-<body class="dark:bg-orange-600 dark:bg-fixed dark:w-full dark:h-full bg-[url('https://nasaprospect.com/img/space_stars_static.svg')]">
+<body class="dark:bg-orange-600 dark:bg-fixed dark:w-full dark:h-full bg-fixed bg-[url('https://nasaprospect.com/img/space_stars_static.svg')]">
   <!-- Title -->
   <div class="container mx-auto flex flex-col h-auto text-white">
     <div class="m-6" >
@@ -152,24 +152,26 @@
           </div>
         </div>
       </section>
-
     </div>
   </div>
   <!-- Image section below this line-->
   <!--Image search and gallery container-->
+  <div class="flex justify-center items-center w-full mb-10 mt-16" >
+    <h3 class="text-2xl lg:text-3xl text-white" >Search by a specific sol number</h3>
+  </div>
   <div>
     <!--Search Box: Next two divs center the search box an set screen parameters -->
-    <div class="flex justify-center w-full">
-      <div class="mb-3 xl:w-1/3 h-full">
+    <div class="flex justify-center w-full mb-4 h-12">
+      <div class="w-4/6 mx-10 md:w-1/2 md:mx-0 lg:w-1/3 h-full">
         <!--Direct parent to the search box input and search button-->
-        <div class="input-group relative flex flex-nowrap items-stretch w-full mb-4">
+        <div class="input-group relative flex flex-nowrap items-stretch h-full w-full mb-4">
           <!--Search box input -->
           <input id="parameters" type="search"
-            class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            placeholder="Search Rover Images By Sol 1-1000" aria-label="Search" aria-describedby="button-addon3">
+            class="h-full form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Search..." aria-label="Search" aria-describedby="button-addon3">
           <!--Search button -->
           <button
-            class="btn inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+            class="btn inline-block px-6 py-2 border-2 border-blue-600 text-white text-lg font-medium leading-tight uppercase rounded hover:bg-black focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
             type="button" id="button-addon3">Search</button>
         </div>
       </div>
@@ -209,15 +211,45 @@
               </div>
             </div>
           </div>
+          <div class="md:flex md:flex-wrap">
+            <div class="md:flex md:flex-wrap md:w-1/2">
+              <div class="md:w-1/2 p-1 md:p-2">
+                <img id="img6" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="/assets/images/imgholder.jpeg">
+              </div>
+              <div class="md:w-1/2 p-1 md:p-2">
+                <img id="img7" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="/assets/images/imgholder.jpeg">
+              </div>
+              <div class="md:w-full p-1 md:p-2">
+                <img id="img8" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="/assets/images/imgholder.jpeg">
+              </div>
+            </div>
+            <div class="md:flex md:flex-wrap md:w-1/2">
+              <div class="md:w-full p-1 md:p-2">
+                <img id="img9" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="/assets/images/imgholder.jpeg">
+              </div>
+              <div class="md:w-1/2 p-1 md:p-2">
+                <img id="img10" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="/assets/images/imgholder.jpeg">
+              </div>
+              <div class="md:w-1/2 p-1 md:p-2">
+                <img id="img11" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="/assets/images/imgholder.jpeg">
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
   </div>
   <!-- footer with Mars facts -->
-  <footer class="dark:bg-orange-500 text-white mr-12 ml-12 mt-12 pb-12">
+  <footer class="text-white mr-12 ml-12 mt-12 pb-12">
     <h2 class="font-bold">More about Mars</h2>
     <p>Mars is the fourth planet from the sun. Mars is one of the most explored planets in our solar system. NASA
-      currently has two rovers, Curiosity and Perserverance, and one helicopter, Ingenuity further exploring and sending
+      currently has two rovers, Curiosity and Perseverance, and one helicopter, Ingenuity further exploring and sending
       us data. All data shown on this website are from these rovers.</p>
     <a class="underline mt-6" href="https://solarsystem.nasa.gov/planets/mars/overview/">Read even more info about Mars
       here.</a>
