@@ -936,6 +936,10 @@ body {
   display: none;
 }
 
+img {
+  cursor: pointer;
+}
+
 #lightbox {
   position: fixed;
   z-index: 1000;
@@ -1002,14 +1006,14 @@ body {
   width: 100%;
 }
 
-.dark .dark\:bg-orange-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
-}
-
 .dark .dark\:bg-orange-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-orange-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:bg-opacity-20 {

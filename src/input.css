@@ -17,6 +17,10 @@ body {
   @apply hidden;
 }
 
+img {
+  cursor: pointer;
+}
+
 #lightbox {
   position: fixed;
   z-index: 1000;
