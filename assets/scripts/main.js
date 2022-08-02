@@ -105,15 +105,16 @@ const lightIcon = document.querySelector(".fa-solid");
 const userTheme = localStorage.getItem("theme");
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-
+// the dark/light toggles and them being hidden by default
 const iconToggle = () => {
   darkIcon.classList.toggle("display-none");
   lightIcon.classList.toggle("display-none");
 }
 
-
+// checking the local storage to see if the user theme and the prefered theme match dark
 const themeCheck = () => {
   if (userTheme === "dark" || (!userTheme && systemTheme)) {
+    // adds the dark class to the document El and adds display none to the dark icon
     document.documentElement.classList.add("dark");
     darkIcon.classList.add("display-none");
     return;
@@ -121,7 +122,7 @@ const themeCheck = () => {
   lightIcon.classList.add("display-none")
 }
 
-
+// controls adding and removing the dark class from the documentEl and adding/removing the light or dark to the theme in local storage
 const themeSwitch = () => {
   if (document.documentElement.classList.contains("dark")) {
     document.documentElement.classList.remove("dark");
@@ -135,7 +136,7 @@ const themeSwitch = () => {
 }
 
 
-
+// light and dark button triggering the switch event
 lightIcon.addEventListener("click", () => {
   themeSwitch();
 });
