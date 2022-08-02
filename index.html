@@ -8,17 +8,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="mars-favicon" sizes="180x180" href="/assets/images/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="mars-favicon" sizes="180x180" href="./assets/images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/main.css" />
-  <title>Make America Re-love Space</title>
+  <title>Make America Relove Space</title>
 </head>
 
+
 <body class="dark:bg-orange-500 dark:bg-fixed dark:w-full dark:h-full">
+  <!-- Title -->
+  <div class="container mx-auto flex flex-col h-auto text-white">
+    <h1 class="mt-5 text-4xl font-bold">M.A.R.S.</h1>
+    <p>Make America Relove Space</p>
+  </div>
+
   <!-- Main container -->
   <div class="container mx-auto flex h-auto text-white dark:text-black">
     <!-- Main content left side -->
@@ -87,7 +94,7 @@
           </div>
         </div>
 
-        <!-- cards bottom row -->
+        <!-- cards middle row -->
         <div id="weather-details-bottom" class="h-1/2 flex flex-col items-center lg:flex lg:flex-row lg:h-auto">
           <!-- Card One -->
           <div id="weather-details-rain"
@@ -106,11 +113,41 @@
           <div id="weather-details-rain"
             class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2">
             <div class="flex justify-center items-center w-full">
-              <i class="fas fa-wind text-5xl mr-12"></i>
+              <i class="far fa-arrow-alt-circle-down text-5xl mr-12"></i>
+              <div class="flex flex-col text-center">
+                <p>UV Index</p>
+                <p class="text-3xl lg:text-4xl">
+                  <span data-uv-index></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- cards bottom row -->
+        <div id="weather-details-bottom" class="h-1/2 flex flex-col items-center lg:flex lg:flex-row lg:h-auto">
+          <!-- Card One -->
+          <div id="weather-details-rain"
+            class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2">
+            <div class="flex justify-center items-center w-full">
+              <i class="far fa-sun text-5xl mr-12"></i>
               <div class="flex flex-col text-center">
                 <p>Sunrise</p>
                 <p class="text-3xl lg:text-4xl">
                   <span data-sunrise></span>
+                  </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card Two -->
+          <div id="weather-details-rain"
+            class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2">
+            <div class="flex justify-center items-center w-full">
+              <i class="far fa-moon text-5xl mr-12"></i>
+              <div class="flex flex-col text-center">
+                <p>Sunset</p>
+                <p class="text-3xl lg:text-4xl">
+                  <span data-sunset></span>
                 </p>
               </div>
             </div>
@@ -141,32 +178,32 @@
     </div>
     <div>
       <section class="overflow-hidden text-gray-700">
-        <div class="container px-5 py-2 mx-auto lg:px-20">
-          <div class="flex flex-wrap -m-1 md:-m-2">
-            <div class="flex flex-wrap w-1/2">
-              <div class="w-1/2 p-1 md:p-2">
+        <div class="container px-5 py-2 mx-auto lg:px-8">
+          <div class="md:flex md:flex-wrap">
+            <div class="md:flex md:flex-wrap md:w-1/2">
+              <div class="md:w-1/2 p-1 md:p-2">
                 <img id="img0" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                   src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp">
               </div>
-              <div class="w-1/2 p-1 md:p-2">
+              <div class="md:w-1/2 p-1 md:p-2">
                 <img id="img1" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                   src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp">
               </div>
-              <div class="w-full p-1 md:p-2">
+              <div class="md:w-full p-1 md:p-2">
                 <img id="img2" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                   src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
               </div>
             </div>
-            <div class="flex flex-wrap w-1/2">
-              <div class="w-full p-1 md:p-2">
+            <div class="md:flex md:flex-wrap md:w-1/2">
+              <div class="md:w-full p-1 md:p-2">
                 <img id="img3" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                   src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp">
               </div>
-              <div class="w-1/2 p-1 md:p-2">
+              <div class="md:w-1/2 p-1 md:p-2">
                 <img id="img4" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                   src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp">
               </div>
-              <div class="w-1/2 p-1 md:p-2">
+              <div class="md:w-1/2 p-1 md:p-2">
                 <img id="img5" alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                   src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp">
               </div>
@@ -178,12 +215,12 @@
   </div>
   <!-- footer with Mars facts -->
   <footer class="text-white m-12">
-    <h2>More about Mars</h2>
+    <h2 class="font-bold">More about Mars</h2>
     <p>Mars is the fourth planet from the sun. Mars is one of the most explored planets in our solar system. NASA
       currently has two rovers, Curiosity and Perserverance, and one helicopter, Ingenuity further exploring and sending
       us data. All data shown on this website are from these rovers.</p>
     <a class="underline mt-6" href="https://solarsystem.nasa.gov/planets/mars/overview/">Read even more info about Mars
-      here</a>
+      here.</a>
   </footer>
 
   <script src="https://momentjs.com/downloads/moment.js"></script>
