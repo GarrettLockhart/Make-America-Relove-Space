@@ -111,13 +111,13 @@
         <!--Direct parent to the search box input and search button-->
         <div class="input-group relative flex flex-nowrap items-stretch w-full mb-4">
           <!--Search box input -->
-          <input type="search"
+          <input id="parameters" type="search"
             class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            placeholder="Search Rover Images by Date/SOL" aria-label="Search" aria-describedby="button-addon3">
+            placeholder="Search by SOL 1-1000" aria-label="Search" aria-describedby="button-addon3">
           <!--Search button -->
           <button
             class="btn inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-            type="button" id="button-addon3">Search</button>
+            type="button" id="button-addon3" onclick="search()">Search</button>
         </div>
       </div>
     </div>
