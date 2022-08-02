@@ -40,7 +40,7 @@ $(document).ready(function () {
         } else {
           var errorMsgEl = $('<li>');
               $(errorMsgEl).text('No images on that day, please try again');
-              $(errorMsgEl).css('font-weight', 'bold');
+              $(errorMsgEl).css({'font-weight': 'bold', 'color': 'white'});
               $('#error-list').append(errorMsgEl);
               // if error, removed displayed error after 5 seconds
               setTimeout(function () {
