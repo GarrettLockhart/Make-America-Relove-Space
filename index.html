@@ -18,7 +18,14 @@
   <title>Make America Re-love Space</title>
 </head>
 
-<body>
+
+<body class="dark:bg-orange-500 dark:bg-fixed dark:w-full dark:h-full">
+  <!-- Title -->
+  <div class="container mx-auto flex flex-col h-auto text-white">
+    <h1 class="mt-5 text-4xl font-bold">M.A.R.S.</h1>
+    <p>Make America Relove Space</p>
+  </div>
+
   <!-- Main container -->
   <div class="container mx-auto flex h-screen text-white">
     <!-- Main content left side -->
@@ -53,7 +60,7 @@
           <div id="weather-details-temp-high"
             class="box-border flex justify-center items-center w-full m-2 p-5 rounded-lg bg-gray-200 bg-opacity-20 backdrop-blur-sm lg:w-1/2">
             <div class="flex justify-center items-center w-full lg:w-1/2">
-              <i class="fa-solid fa-temperature-high text-5xl mr-12 text-red-400"></i>
+              <i class="fa-solid fa-temperature-high text-5xl mr-12 text-red-600"></i>
               <div class="flex flex-col text-center">
                 <p>High</p>
                 <p class="text-3xl lg:text-4xl">-15 &deg;F</p>
@@ -148,7 +155,10 @@
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./assets/scripts/main.js"></script>
-  
+  <script>
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.className = theme;
+  </script>
 </body>
 
 
