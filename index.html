@@ -19,11 +19,13 @@
 </head>
 
 
-<body class="dark:bg-orange-500 dark:bg-fixed dark:w-full dark:h-full">
+<body class="dark:bg-orange-600 dark:bg-fixed dark:w-full dark:h-full bg-[url('https://nasaprospect.com/img/space_stars_static.svg')]">
   <!-- Title -->
   <div class="container mx-auto flex flex-col h-auto text-white">
-    <h1 class="mt-5 text-4xl font-bold">M.A.R.S.</h1>
-    <p>Make America Relove Space</p>
+    <div class="m-6" >
+      <h1 class="mt-5 text-4xl font-bold">M.A.R.S.</h1>
+      <p>Make America Relove Space</p>
+    </div>
   </div>
 
   <!-- Main container -->
@@ -172,10 +174,12 @@
           <!--Search button -->
           <button
             class="btn inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-            type="button" id="button-addon3" onclick="search()">Search</button>
+            type="button" id="button-addon3">Search</button>
         </div>
       </div>
     </div>
+    <ul id="error-list" class="text-center w-full flex justify-center">
+    </ul>
     <div>
       <section class="overflow-hidden text-gray-700">
         <div class="container px-5 py-2 mx-auto lg:px-8">
@@ -214,7 +218,7 @@
     </div>
   </div>
   <!-- footer with Mars facts -->
-  <footer class="dark:bg-orange-500 text-white mt-12 pb-12">
+  <footer class="dark:bg-orange-500 text-white mr-12 ml-12 mt-12 pb-12">
     <h2 class="font-bold">More about Mars</h2>
     <p>Mars is the fourth planet from the sun. Mars is one of the most explored planets in our solar system. NASA
       currently has two rovers, Curiosity and Perserverance, and one helicopter, Ingenuity further exploring and sending

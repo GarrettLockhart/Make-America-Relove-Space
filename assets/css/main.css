@@ -627,6 +627,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.ml-12 {
+  margin-left: 3rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -749,6 +753,10 @@ video {
 
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
+}
+
+.bg-\[url\(\'https\:\/\/nasaprospect\.com\/img\/space_stars_static\.svg\'\)\] {
+  background-image: url('https://nasaprospect.com/img/space_stars_static.svg');
 }
 
 .bg-clip-padding {
@@ -997,6 +1005,11 @@ body {
 .dark .dark\:bg-orange-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-orange-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:bg-opacity-20 {
